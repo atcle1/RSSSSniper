@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.atcle.rsssniper" android:versionName="2.4" android:versionCode="40">
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+	android:name=".RSSSniperApplication">
+		<activity android:name=".RSSSniperActivity" android:label="@string/app_name"
+			android:screenOrientation="portrait" android:launchMode="singleTask">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<!-- menu -->
+		<activity android:name=".AddFeedActivity" android:label="새 피드 추가"
+			android:windowSoftInputMode="stateHidden">		    
+		</activity>
+		<activity android:name=".ModifyFeedActivity" android:label="피드 수정"
+			android:windowSoftInputMode="stateHidden"></activity>
+		<activity android:name=".AddFilterActivity" android:label="필터 설정"
+			android:theme="@android:style/Theme.Dialog"></activity>
+		
+		<activity android:name=".OPMLActivity" android:label="Import OPML"
+		    android:windowSoftInputMode="stateHidden"	></activity>
+		<activity android:name=".SelectInputOptionActivity" android:label="입력방법 선택"	
+		    android:theme="@android:style/Theme.Dialog"></activity>
+				<activity android:name=".recommend.RecommendFeedActivity" android:label="피드모음"	
+></activity>
+
+		<!-- Pref -->
+		<activity android:name=".pref.PrefActivity" android:label="@string/app_name"></activity>
+		<activity android:name=".pref.HelpActivity" android:label="도움말"></activity>
+
+		<!-- service -->
+		<service android:name=".main.ObserveService">
+			<intent-filter>
+				<action android:name=".main.ObserveService" />
+			</intent-filter>
+		</service>
+
+		    
+	</application>
+</manifest>

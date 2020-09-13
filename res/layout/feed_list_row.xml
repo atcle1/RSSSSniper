@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:gravity="center_vertical">
+	<CheckBox android:id="@+id/feed_list_row_check"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:focusable="false" />
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="0px" android:layout_weight="1"
+		android:layout_height="wrap_content" android:gravity="center_vertical"
+		android:id="@+id/feed_list_row_content" android:focusable="false">
+		<TextView android:id="@+id/feed_list_row_nick"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:text="nick" android:gravity="center_vertical"
+			android:textColor="#fff" android:paddingLeft="5dp"
+			android:singleLine="true" android:ellipsize="end"
+			android:textSize="15dp" />
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical">
+			<TextView android:id="@+id/feed_list_row_updateDate"
+				android:layout_width="170dp" android:layout_height="wrap_content"
+				android:text="" android:textColor="#ddd" android:paddingLeft="5dp" />
+			<TextView android:id="@+id/feed_list_row_interval"
+				android:layout_width="30dp" android:layout_height="wrap_content"
+				android:text="" android:textColor="#7f7" android:paddingLeft="5dp"
+				android:gravity="right" />
+			<TextView android:id="@+id/feed_list_row_feedCount"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="" android:textColor="#7f7" android:paddingLeft="5dp"
+				android:gravity="center" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView android:layout_width="wrap_content"
+		android:layout_height="fill_parent" android:src="@drawable/right"
+		android:paddingRight="5dp"  />
+</LinearLayout>

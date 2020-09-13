@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="maxParseCountArr">
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>100</item>
+	</string-array>
+	<string-array name="fontSizeArr">
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+	</string-array>
+	<string-array name="fontSpaceArr">
+		<item>1.0f</item>
+		<item>1.1f</item>
+		<item>1.2f</item>
+		<item>1.3f</item>
+		<item>1.5f</item>
+		<item>1.6f</item>
+		<item>1.8f</item>
+		<item>2.0f</item>
+	</string-array>
+</resources>

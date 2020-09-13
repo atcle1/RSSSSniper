@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@android:id/tabhost">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TabWidget android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@android:id/tabs" />
+		<FrameLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:id="@android:id/tabcontent">
+			<!-- tab1 feed list -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical"
+				android:id="@+id/main_tab1">
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:background="@drawable/rect1" android:layout_marginTop="5dp"
+					android:layout_marginLeft="2dp" android:layout_marginRight="2dp"
+					android:gravity="center">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="피드 감시"
+						android:id="@+id/feed_snipe_text" android:textSize="17dp"
+						android:textColor="#ffffff" android:layout_marginLeft="10dp"
+						android:layout_marginRight="15dp" />
+					<ToggleButton android:layout_width="wrap_content"
+						android:textOn="켜짐" android:textOff="꺼짐" android:layout_height="wrap_content"
+						android:id="@+id/feed_snipe_toggle" android:text=" FEED 감시"
+						android:layout_marginTop="2dp" />
+				</LinearLayout>
+				<ListView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/feed_List_listView"
+					android:focusable="true" android:focusableInTouchMode="true"></ListView>
+			</LinearLayout>
+			<!-- tab2 feed read -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical"
+				android:id="@+id/main_tab2">
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="vertical"
+					android:id="@+id/feed_Read_header" android:background="#404040"
+					android:padding="5dp">
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:orientation="horizontal"
+						android:gravity="center_vertical">
+						<ImageView android:layout_width="15dp"
+							android:layout_height="15dp" android:src="@drawable/rss_icon"
+							android:layout_marginRight="3dp" android:layout_gravity="center" />
+						<TextView android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:text="title"
+							android:id="@+id/feed_Read_title" android:textColor="#fff"
+							android:textSize="18dp" android:ellipsize="marquee"
+							android:focusable="true" android:focusableInTouchMode="true"
+							android:singleLine="true" />
+					</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:orientation="horizontal"
+						android:gravity="center_vertical">
+						<ImageView android:layout_width="13dp"
+							android:layout_height="13dp" android:src="@drawable/refresh"
+							android:layout_marginRight="3dp" android:paddingTop="2dp" />
+						<TextView android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text=""
+							android:id="@+id/feed_Read_updateDate"
+							android:layout_marginRight="15dp" android:textColor="#fafafa" />
+						<TextView android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:text="2/20"
+							android:id="@+id/feed_Read_count" />
+					</LinearLayout>
+				</LinearLayout>
+
+				<ListView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/feed_Read_listView">
+				</ListView>
+
+				<RelativeLayout android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/feed_Read_webViewRL">
+					<WebView android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:id="@+id/feed_Read_webView"
+						android:visibility="gone" android:background="#000000"/>
+					<TextView android:text="loading..." android:layout_height="wrap_content"
+						android:layout_width="wrap_content" android:background="#aaffffff"
+						android:textColor="#000000" android:id="@+id/feed_Read_webView_loading"/>
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- tab3 events -->
+			<FrameLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:id="@+id/main_tab3">
+				
+				<ListView
+                    android:id="@+id/feed_Event_listView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="50dp"/>
+                    
+				<SlidingDrawer
+				    android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:content="@+id/content"
+				    android:handle="@+id/handle">
+					
+					<LinearLayout
+					   android:id="@+id/handle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:background="#000" >
+                        <Button
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:text="Filters"
+                            android:textColor="#fff"
+                            android:background="@drawable/roundcorner" />
+                    </LinearLayout>
+				    
+				    <LinearLayout
+                        android:id="@+id/content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#000" >
+
+				<ListView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/feed_Filter_listView">
+				</ListView>
+				        
+				    </LinearLayout>
+				    
+				</SlidingDrawer>
+			</FrameLayout>
+			<!-- tab4 filters -->
+			<!-- 
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical"
+				android:id="@+id/main_tab4"> 
+			</LinearLayout>
+			-->
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>

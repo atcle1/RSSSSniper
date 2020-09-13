@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="#000000" android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="#000000" android:layout_marginBottom="5dp">
+
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="피드 URL을 입력하신 후 접속을 누루시면, 자동으로 채워집니다." />
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="추천 피드" />
+			<Spinner android:id="@+id/add_feed_suggest"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="FEED URL" />
+			<EditText android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/add_feed_url"
+				android:hint="http://example.com/rss.xml" android:text="http://www.ppomppu.co.kr/rss.php?id=ppomppu"
+				android:inputType="textUri" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="접속"
+				android:onClick="onClickConnect" />
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="#000000" android:layout_marginBottom="5dp">
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="FEED NICK" />
+			<EditText android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/add_feed_nick" />
+			<TextView android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="감시 주기 (분)" />
+			<EditText android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/add_feed_interval"
+				android:inputType="number" android:text="20" />
+		</LinearLayout>
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="#000000">
+			<Button android:layout_width="0px" android:layout_weight="1"
+				android:layout_height="wrap_content" android:text="확인"
+				android:onClick="onClickOK" />
+			<Button android:layout_width="0px" android:layout_weight="1"
+				android:layout_height="wrap_content" android:text="취소"
+				android:onClick="onClickCancel" />
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

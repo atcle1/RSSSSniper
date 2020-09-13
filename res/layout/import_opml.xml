@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Click Find button or input OPML file path.\r\n2. Click Load button.\r\n3. Click Import button." />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/opml_path_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="/mnt/sdcard/" >
+            </EditText>
+
+            <Button
+                android:id="@+id/opml_find_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickFind"
+                android:text="Find" />
+
+            <Button
+                android:id="@+id/opml_load_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickLoad"
+                android:text="Load" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/opml_rss_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/opml_import_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:onClick="onClickImport"
+                android:text="Import" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

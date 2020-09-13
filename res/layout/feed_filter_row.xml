@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:gravity="center_vertical">
+	<TextView android:id="@+id/filter_list_row_nick"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center_vertical" android:textColor="#fff"
+		android:paddingLeft="5dp" android:textSize="17dp" android:background="#2a2a2a" />
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:paddingLeft="5dp">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+			<ImageView android:layout_width="11dp"
+				android:layout_height="11dp" android:src="@drawable/filter_allow_icon"
+				android:id="@+id/filter_list_row_include_icon" />
+			<TextView android:id="@+id/filter_list_row_include"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical" android:textColor="#55ff55"
+				android:paddingLeft="3dp" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+			<ImageView android:layout_width="12dp"
+				android:layout_height="12dp" android:src="@drawable/filter_block_icon"
+				android:id="@+id/filter_list_row_exclude_icon"  />
+			<TextView android:id="@+id/filter_list_row_exclude"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical" android:textColor="#ff5555"
+				android:paddingLeft="3dp" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

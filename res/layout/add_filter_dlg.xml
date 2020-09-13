@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:paddingLeft="10dp" android:paddingRight="10dp"
+	android:paddingBottom="10dp">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/add_filter_title"
+			android:textColor="#ffffff" android:singleLine="true"
+			android:ellipsize="marquee" android:focusableInTouchMode="true"
+			android:focusable="true" android:textSize="17dp" />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text=" 제목이 포함단어를 포함하고, 제외 단어를 가지고 있지 않은 새 글만 사용자에게 알립니다.\n  포함단어가 없을 경우 제외단어 조건만 필터링 합니다."
+			android:layout_marginBottom="3dp" />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="포함단어(띄어쓰기, 엔터로 구분)" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/add_filter_include"
+			android:hint="" />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="제외단어(띄어쓰기, 엔터로 구분)" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/add_filter_exclude"
+			android:layout_marginBottom="3dp" />
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<Button android:layout_width="0px" android:layout_weight="1"
+				android:layout_height="wrap_content" android:text="확인"
+				android:onClick="onClickOK" />
+			<Button android:layout_width="0px" android:layout_weight="1"
+				android:layout_height="wrap_content" android:text="취소"
+				android:onClick="onClickCancel" />
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<Preference android:key="help" android:title="도움말" />
+
+	<PreferenceCategory android:title="서비스 설정">
+		<CheckBoxPreference android:key="bObserveNotification"
+			android:title="상태바 표시" android:summary="피드 감시 중일때 상태바에 표시합니다." />
+		<ListPreference android:key="strMaxParseCount"
+			android:title="최대 아이템 수" android:summary="최대 읽어올 피드 글 개수를 제한합니다."
+			android:entries="@array/maxParseCountArr" android:entryValues="@array/maxParseCountArr" />
+		<CheckBoxPreference android:key="bObserveOnlyWifi"
+			android:title="감시시 모바일접속 차단" android:summary="피드 감시시 Wifi연결시에만 자동 업데이트 합니다." />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="새 피드 알림 설정">
+		<CheckBoxPreference android:key="bNewFeedNotification"
+			android:title="상태바 알림" android:summary="새 글이 있을 경우 상태바에 알림립니다." />
+		<CheckBoxPreference android:key="bAlarmBeep"
+			android:title="상태바 알림소리 설정" android:summary="상태바 알림 소리를 설정합니다." />
+		<CheckBoxPreference android:key="bVibrate"
+			android:title="상태바 알림진동 설정" android:summary="상태바 알림 진동을 설정합니다." />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="리드탭 설정">
+		<CheckBoxPreference android:key="rt_read_one" android:title="하나씩만 보기"  android:summary="피드글을 하나씩만 엽니다."/>
+		<CheckBoxPreference android:key="rt_auto_close" android:title="자동닫기"  android:summary="피드글이 화면을 넘어갈 경우 자동으로 닫습니다."/>
+		<ListPreference android:key="rt_text_size" android:title="본문글자크기"  android:summary="본문 글자크기를 조정합니다."
+		    android:entries="@array/fontSizeArr" android:entryValues="@array/fontSizeArr" />
+		<ListPreference android:key="rt_text_space" android:title="본문줄간격"  android:summary="본문 줄간격을 조정합니다."
+		    android:entries="@array/fontSpaceArr" android:entryValues="@array/fontSpaceArr" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="DB">
+		<Preference android:key="backupDb" android:title="DB 백업"
+			android:summary="피드 목록을 백업합니다." />
+		<Preference android:key="restoreDb" android:title="DB 복원"
+			android:summary="피드 목록을 복원합니다." />
+		<Preference android:key="initDb" android:title="DB 초기화"
+			android:summary="피드 목록을 초기화 합니다." />
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="기타">
+		<Preference android:key="mail" android:title="메일 보내기"  android:summary="제작자에게 메일을 보냅니다."/>
+	</PreferenceCategory>
+</PreferenceScreen>
